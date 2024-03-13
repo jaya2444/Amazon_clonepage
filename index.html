@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon"
+        href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Amazon_icon.svg/2048px-Amazon_icon.svg.png">
+    <title>online shoppping site in India: shop online for mobiles,books,shoes and More</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d93bdd9aa4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="nav-logo border">
+                <div class="logo"></div>
+            </div>
+            <div class="nav-address border">
+                <p class="add-first">Deliver to</p>
+                <div class="add-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p class="add-second">India</p>
+                </div>
+
+            </div>
+            <div class="nav-search">
+                <select class="search-select">
+                    <option>All</option>
+                </select>
+                <input placeholder=" Search Amazon" class="search-input">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+            </div>
+            <div class="lang">
+
+                <img id="a" src="data:image/png;base64,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">
+                <p>EN</p>
+                <i id="j" class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="nav-signin border">
+                <p><span>Hello,sign in</span></p>
+                <p class="nav-second">Account & Lists</p>
+            </div>
+            <div class="nav-return border">
+                <p><span>Return</span></p>
+                <p class="nav-second">& Orders</p>
+            </div>
+            <div class="nav-cart border">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Cart
+
+            </div>
+
+
+        </div>
+
+
+        <div class="panel">
+            <div class="panel-all">
+                <i class="fa-solid fa-bars"></i>
+                All
+            </div>
+            <div class="panel-ops">
+                <p class="underline">Fresh</p>
+                <p class="underline">Amazon miniTV</p>
+                <p class="underline">Sell</p>
+                <p class="underline">Best Sellers</p>
+                <p class="underline">Mobiles</p>
+                <p class="underline">Today's Deals</p>
+                <p class="underline">Electronics</p>
+               <p class="underline"> Customer Service</p>
+               <p class="underline">Prime</p>
+               <i  id="m" class="fa-solid fa-caret-down"></i>
+
+            </div>
+            <div id="b" class="panel-deals">
+                New Launches from Mobiles,Electronics & more|Shop now
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <section>
+        <div class="image-container">
+            <div class="image-list">
+                <div class="image-item">
+                    <img
+                        src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/OHL/Budget/Unrec/GW/BS_2X_PC_1._CB580097921_.jpg">
+
+                </div>
+            </div>
+            <div class="image-btn-container">
+                <button class="slider-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="slider-btn"><i class="fa-solid fa-chevron-right"></i></button>
+
+            </div>
+        </div>
+    </section>
+
+
+    <main class="main">
+        <div class="card-product-container ">
+            <div class="card-product">
+                <h2>Appliances for your home | Up to 55% off</h2>
+                <div class="card-product-nested-card">
+                    <div class="card-nested">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-372x232----B08RDL6H79._SY232_CB667322346_.jpg">
+                        <p>Air conditioners</p>
+
+                    </div>
+                    <div class="card-nested">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/B08345R1ZW---372x232._SY232_CB667322346_.jpg">
+                        <p>Refrigerators</p>
+
+                    </div>
+                    <div class="card-nested">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/B07G5J5FYP._SY232_CB667322346_.jpg">
+                        <p>Microwaves</p>
+
+                    </div>
+                    <div class="card-nested">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08CPQVLZT._SY232_CB667322346_.jpg">
+                        <p>Washing machines</p>
+
+                    </div>
+
+
+
+
+                </div>
+                <button class="card-product-btn" href="#">see more</button>
+
+            </div>
+            <div class="card-product">
+                <h2>Automotive essentials | Up to 60% off</h2>
+                <div class="card-product-nested-card">
+                    <div class="card-nested">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/img17/Auto/2020/GW/PCQC/Glasscare2x._SY232_CB410830552_.jpg">
+                        <p>accessories</p>
+
+                    </div>
+                    <div class="card-nested">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/img17/Auto/2020/GW/PCQC/Rim_tyrecare2x._SY232_CB410830552_.jpg">
+                        <p>Tyre & rim care</p>
+
+                    </div>
+                    <div class="card-nested">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/img17/Auto/2020/GW/PCQC/Vega_helmet_372x232._SY232_CB405083904_.jpg">
+                        <p>Helmets</p>
+
+                    </div>
+                    <div class="card-nested">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/img17/Auto/2020/GW/PCQC/Vaccum2x._SY232_CB410830555_.jpg">
+                        <p>Vacuum cleaner</p>
+
+                    </div>
+
+
+
+
+                </div>
+                <button class="card-product-btn">see more</button>
+
+            </div>
+            <div class="card-product">
+                <h2>Up to 60% off | Styles for man</h2>
+                <div class="card-product-nested-card">
+                    <div class="card-nested">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-1-372-232._SY232_CB636110853_.jpg">
+                        <p>Clothing</p>
+
+                    </div>
+                    <div class="card-nested">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-2-372-232._SY232_CB636110853_.jpg">
+                        <p>Footwear</p>
+
+                    </div>
+                    <div class="card-nested">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-3-372-232._SY232_CB636110853_.jpg">
+                        <p>Watches</p>
+
+                    </div>
+                    <div class="card-nested">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF_4-372-232._SY232_CB636110853_.jpg">
+                        <p>Bags & wallets</p>
+
+                    </div>
+
+
+
+
+                </div>
+                <button class="card-product-btn">see more</button>
+
+            </div>
+            <div class="card-product">
+                <h2>Appliances for your home | Up to 55% off</h2>
+                <div class="card-product-nested-card">
+                    <div class="card-nested">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-372x232----B08RDL6H79._SY232_CB667322346_.jpg">
+                        <p>Air conditioners</p>
+
+                    </div>
+                    <div class="card-nested">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/B08345R1ZW---372x232._SY232_CB667322346_.jpg">
+                        <p>Refrigerators</p>
+
+                    </div>
+                    <div class="card-nested">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/B07G5J5FYP._SY232_CB667322346_.jpg">
+                        <p>Microwaves</p>
+
+                    </div>
+                    <div class="card-nested">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08CPQVLZT._SY232_CB667322346_.jpg">
+                        <p>Washing machines</p>
+
+                    </div>
+
+
+
+
+                </div>
+                <button class="card-product-btn">see more</button>
+
+            </div>
+
+
+
+
+        </div>
+
+        <div class="card-product-container container">
+            <div class="card-product">
+                <h2>Appliances for your home | Up to 55% off</h2>
+                <div class="card-product-nested-card">
+                    <div class="card-nested">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-372x232----B08RDL6H79._SY232_CB667322346_.jpg">
+                        <p>Air conditioners</p>
+
+                    </div>
+                    <div class="card-nested">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/B08345R1ZW---372x232._SY232_CB667322346_.jpg">
+                        <p>Refrigerators</p>
+
+                    </div>
+                    <div class="card-nested">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/B07G5J5FYP._SY232_CB667322346_.jpg">
+                        <p>Microwaves</p>
+
+                    </div>
+                    <div class="card-nested">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG15/Irfan/GATEWAY/MSO/Appliances-QC-PC-186x116--B08CPQVLZT._SY232_CB667322346_.jpg">
+                        <p>Washing machines</p>
+
+                    </div>
+
+
+
+
+                </div>
+                <button class="card-product-btn">see more</button>
+
+            </div>
+            <div class="card-product">
+                <h2>Try Prime today</h2>
+                <div class="card-product-nested-card">
+                    <div class="card-nested">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/prime/ACQ/delivery_2x._SY232_CB572871792_.jpg">
+                        <p>one delivery free</p>
+
+                    </div>
+                    <div class="card-nested">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/prime/ACQ/movies_2x._SY232_CB572871792_.jpg">
+                        <p>Movies & TV show</p>
+
+                    </div>
+                    <div class="card-nested">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/prime/ACQ/music_2x._SY232_CB572871792_.jpg">
+                        <p>AD-free music</p>
+
+                    </div>
+                    <div class="card-nested">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/prime/ACQ/cbcc_2x._SY232_CB572871792_.jpg">
+                        <p>unlimited cash</p>
+
+                    </div>
+
+
+
+
+                </div>
+                <button class="card-product-btn">see more</button>
+
+            </div>
+            <div class="card-product">
+                <h2>Top rated products from new sellers</h2>
+                <div class="card-product-nested-card">
+                    <div class="card-nested">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/Img24/SMB/GW/BAU/Desktop/NSS_Deo_372x232_2x._SY232_CB580162184_.jpg">
+                        <p>Skin care</p>
+
+                    </div>
+                    <div class="card-nested">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/Img24/SMB/GW/BAU/Desktop/NSS_Haircare_372x232_2x._SY232_CB580162184_.jpg">
+                        <p>Haier care</p>
+
+                    </div>
+                    <div class="card-nested">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/Img24/SMB/GW/BAU/Desktop/NSS_Grooming_372x232_2x._SY232_CB580162184_.jpg">
+                        <p>Grooming Devices</p>
+
+                    </div>
+                    <div class="card-nested">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/Img24/SMB/GW/BAU/Desktop/NSS_Skincare_372x232_2x._SY232_CB580162184_.jpg">
+                        <p>Duos & Fragrances</p>
+
+                    </div>
+
+
+
+
+                </div>
+                <button class="card-product-btn">see more</button>
+
+            </div>
+            <div class="card-product">
+                <h2>Top rated products from small businesses</h2>
+                <div class="card-product-nested-card">
+                    <div class="card-nested">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/Img24/SMB/GW/BAU/Desktop/NAM_Fans_372x232_2x._SY232_CB580162149_.jpg">
+                        <p>Fans</p>
+
+                    </div>
+                    <div class="card-nested">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/Img24/SMB/GW/BAU/Desktop/NAM_AC_372x232_2x._SY232_CB580162149_.jpg">
+                        <p>Coolears & Heaters</p>
+
+                    </div>
+                    <div class="card-nested">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/Img24/SMB/GW/BAU/Desktop/NAM_Water_Purifiers_372x232_2x._SY232_CB580162149_.jpg">
+                        <p>Water purifiers</p>
+
+                    </div>
+                    <div class="card-nested">
+                        <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/Img24/SMB/GW/BAU/Desktop/NAM_Oven_372x232_2x._SY232_CB580162149_.jpg">
+                        <p>Oven,toaster,gill</p>
+
+                    </div>
+
+
+
+
+                </div>
+                <button class="card-product-btn">see more</button>
+
+            </div>
+
+
+
+
+        </div>
+
+        <div class="shop-section">
+            <div class="box">
+                <div class="box-content">
+                    <h2>Clothes</h2>
+                    <div class="box-img" style="background-image: url('box1_image.jpg');"></div>
+                    <p>See more</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-content">
+                    <h2>Health & Personal Care</h2>
+                    <div class="box-img" style="background-image: url('box2_image.jpg');"></div>
+                    <p>See more</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-content">
+                    <h2>Furniture</h2>
+                    <div class="box-img" style="background-image: url('box3_image.jpg');"></div>
+                    <p>See more</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-content">
+                    <h2>Electronics</h2>
+                    <div class="box-img" style="background-image: url('box4_image.jpg');"></div>
+                    <p>See more</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-content">
+                    <h2>Beauty picks</h2>
+                    <div class="box-img" style="background-image: url('box5_image.jpg');"></div>
+                    <p>See more</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-content">
+                    <h2>Pet care</h2>
+                    <div class="box-img" style="background-image: url('box6_image.jpg');"></div>
+                    <p>See more</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-content">
+                    <h2>New Arrival in Toys</h2>
+                    <div class="box-img" style="background-image: url('box7_image.jpg');"></div>
+                    <p>See more</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-content">
+                    <h2>Clothes</h2>
+                    <div class="box-img" style="background-image: url('box1_image.jpg');"></div>
+                    <p>See more</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="today_deals_container">
+            <div class="today_deals_heading">
+                <h1>Today's Deals</h1>
+                <p><a href="#">See all deals</a></p>
+            </div>
+
+            <div class="today_deals_product_container">
+                <div class="today_deals_btn_container">
+                    <button class="today_deal_btn">
+                        <i class="fa-solid fa-angle-left"></i>
+                    </button>
+                    <button class="today_deal_btn">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </button>
+                </div>
+
+
+
+                <div class="today_deals_product_list">
+                    <div class="today_deals_product_items">
+                        <img src="https://m.media-amazon.com/images/I/71WfKcwPBSL._AC_UL480_FMwebp_QL65_.jpg"/>
+                        <div class="discount_container">
+                            <a href="#">25% off</a>
+                            <a href="#">Deal of the day</a>
+                        </div>
+                        <br>
+                        <p>Adidas and campus</p>
+                    </div>
+                    <div class="today_deals_product_items">
+                        <img src="https://m.media-amazon.com/images/I/71jlS987CUL._AC_UL480_FMwebp_QL65_.jpg"/>
+                        <div class="discount_container">
+                            <a href="#">25% off</a>
+                            <a href="#">Deal of the day</a>
+                        </div>
+                        <br>
+                        <p>Kingsman store</p>
+                    </div>
+                    <div class="today_deals_product_items">
+                        <img src="https://m.media-amazon.com/images/I/71YCwXSiWfL._AC_UL480_FMwebp_QL65_.jpg"/>
+                        <div class="discount_container">
+                            <a href="#">25% off</a>
+                            <a href="#">Deal of the day</a>
+                        </div>
+                        <br>
+                        <p>Man Footwear</p>
+                    </div>
+                    <div class="today_deals_product_items">
+                        <img src="https://m.media-amazon.com/images/I/51MochTc+pL._AC_UL480_FMwebp_QL65_.jpg"/>
+                        <div class="discount_container">
+                            <a href="#">25% off</a>
+                            <a href="#">Deal of the day</a>
+                        </div>
+                        <br>
+                        <p>Bunnies</p>
+                    </div>
+                    <div class="today_deals_product_items">
+                        <img src="https://m.media-amazon.com/images/I/71l5eWwKFOL._AC_UL480_FMwebp_QL65_.jpg"/>
+                        <div class="discount_container">
+                            <a href="#">25% off</a>
+                            <a href="#">Deal of the day</a>
+                        </div>
+                        <br>
+                        <p>Kids Footwear</p>
+                    </div>
+                    <div class="today_deals_product_items">
+                        <img src="https://m.media-amazon.com/images/I/81vytQ4xX6S._AC_UL480_FMwebp_QL65_.jpg"/>
+                        <div class="discount_container">
+                            <a href="#">25% off</a>
+                            <a href="#">Deal of the day</a>
+                        </div>
+                        <br>
+                        <p>B-TUF</p>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+
+
+    <!-- <footer>
+        <div class="foot-panel1">
+            Back to Top
+        </div>
+
+        <div class="foot-panel2">
+            <ul>
+                <p>Get to know</p>
+                <a>Careers</a>
+                <a>Blog</a>
+                <a>About Amazon</a>
+                <a>Investor Relations</a>
+                <a>Amazon Devices</a>
+                <a>Amazon Science</a>
+            </ul>
+            <ul>
+                <p>Get to know</p>
+                <a>Careers</a>
+                <a>Blog</a>
+                <a>About Amazon</a>
+                <a>Investor Relations</a>
+                <a>Amazon Devices</a>
+                <a>Amazon Science</a>
+            </ul>
+            <ul>
+                <p>Get to know</p>
+                <a>Careers</a>
+                <a>Blog</a>
+                <a>About Amazon</a>
+                <a>Investor Relations</a>
+                <a>Amazon Devices</a>
+                <a>Amazon Science</a>
+            </ul>
+            <ul>
+                <p>Get to know</p>
+                <a>Careers</a>
+                <a>Blog</a>
+                <a>About Amazon</a>
+                <a>Investor Relations</a>
+                <a>Amazon Devices</a>
+                <a>Amazon Science</a>
+            </ul>
+
+        </div>
+        <div class="foot-panel3">
+            <div class="logo"></div>
+
+        </div>
+        <div class="foot-panel4">
+            <div class="pages">
+                <a>Conditions of Use</a>
+                <a> Privacy</a>
+                <a>Your Ads Privacy Choices</a>
+            </div>
+
+            <div class="copyright">
+                © 1996-2024, Amazon.com, Inc. or its affiliates
+            </div>
+
+        </div>
+    </footer> -->
+
+
+<hr>
+
+    <section class="signin">
+        <div class="signin_box">
+            <div class="signin_para">
+                <div class="spara1">
+                    <p>See personalised recommendations</p>
+                </div>
+                <div class="spara2">
+                    <p>Sign in</p>
+
+                </div>
+                <div class="spara3">
+                    <p>New customers?<a href="#">Start here.</a></p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+<hr>
+
+
+    <div class="backtotop">
+        <p>Back to top</p>
+    </div>
+
+    <footer>
+        <div class="footerone">
+            <div class="footone_para">
+                <div class="allfootpara">
+                    <div class="footone_para1">
+                        <h4>Get to Know Us</h4>
+                        <ul>
+                            <li class="underline">About Us</li>
+                            <li class="underline">Careers</li>
+                            <li class="underline">Press Releases</li>
+                            <li class="underline">Amazon Science</li>
+
+                        </ul>
+
+                    </div>
+                    <div class="footone_para2">
+                        <h4>Connect with Us</h4>
+                        <ul>
+                            <li class="underline">Facebook</li>
+                            <li class="underline">Twitter</li>
+                            <li class="underline">Instagram</li>
+                        
+                        </ul>
+
+                    </div>
+                    <div class="footone_para2">
+                        <h4>Make Money with Us</h4>
+                        <ul>
+                            <li class="underline">sell on Amazon</li>
+                            <li class="underline">sell under Amazon Accelerator</li>
+                            <li class="underline">Protect and Build Your Brand</li>
+                            <li class="underline">Amazon Global Selling</li>
+                            <li class="underline">Become an Affiliate</li>
+                            <li class="underline">Fulfilment by Amazon</li>
+                            <li class="underline">Advertise Your Products</li>
+                            <li class="underline">Amazon Pay on Merchants</li>
+                            
+                        </ul>
+
+                    </div>
+                    <div class="footone_para2">
+                        <h4>Let Us Help You</h4>
+                        <ul>
+                            <li class="underline">COVID-19 and Amazon</li>
+                            <li class="underline">Your Account</li>
+                            <li class="underline">Returns Center</li>
+                            <li class="underline">100% Purchase Protection</li>
+                            <li class="underline">Amazon App Download</li>
+                            <li class="underline">Help</li>
+                            
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="footertwo">
+            <div class="foot2logo">
+                
+                <img class="gap" src="amazon_logo.png">
+            <div id="drop_down">
+                <i class="gap1 fa-solid fa-globe"></i>
+                <span class="gap1">English</span>
+                <i class="fa-solid fa-caret-down "></i>
+                <i class="fa-solid fa-caret-up "></i>
+            </div>
+
+            </div>
+            
+            <div class="foot2link">
+                <p  class="underline" href="#">Australia</p>
+                <p  class="underline" href="#">Brazil</p>
+                <p  class="underline" href="#">Canada</p>
+                <p  class="underline" href="#">China</p>
+                <p  class="underline" href="#">France</p>
+                <p  class="underline" href="#">Germany</p>
+                <p  class="underline" href="#">Italy</p>
+                <p  class="underline" href="#">Japan</p>
+                <p  class="underline" href="#">Mexico</p>
+                <p  class="underline" href="#">Netherlands</p>
+                <p  class="underline" href="#">Poland</p>
+                <p  class="underline" href="#">Singapore</p>
+                <p  class="underline" href="#">Spain</p>
+                <p  class="underline" href="#">Turkey</p>
+                <p  class="underline" href="#">Turkey</p>
+               
+                <p  class="underline" href="#">United Kingdom</p>
+                <p  class="underline" href="#">United States</p>
+
+
+            </div>
+            
+            <div class="footerthree">
+                <div class="others_link">
+                    <div class="otherslink_one">
+                        <div class="footlink1 underline">
+                            <p class="linkfirst">AbeBooks</p>
+                            <p class="link2nd">Books,art <br> collectibles</p>
+                        </div>
+                        <div class="footlink1 underline">
+                            <p class="linkfirst">Shopbop</p>
+                            <p class="link2nd">Designer <br> Fashion Brands</p>
+                            </div>
+                        
+
+                            
+
+                            
+                        </div>
+
+                        <div class="otherslink_one">
+                            <div class="footlink1 underline">
+                                <p class="linkfirst">Amazon Web Services</p>
+                                <p class="link2nd">Scalable Cloud <br>Computing Services</p>
+                            </div>
+                            <div class="footlink1 underline">
+                                <p class="linkfirst">Amazon Business</p>
+                                <p class="link2nd">Everything For Your Business</p>
+                                </div>
+                           
+                                
+    
+                                
+                            </div>
+                            <div class="otherslink_one">
+                                <div class="footlink1 underline">
+                                    <p class="linkfirst">Audible</p>
+                                    <p class="link2nd">Download <br> Audio Books</p>
+                                </div>
+                                <div class="footlink1 underline">
+                                    <p class="linkfirst">Prime Now</p>
+                                    <p class="link2nd">2-Hours Delivery on Everyday items</p>
+                                    </div>
+                                
+        
+                                    
+        
+                                    
+                                </div>
+                                <div class="otherslink_one">
+                                    <div class="footlink1 underline">
+                                        <p class="linkfirst">IMDB</p>
+                                        <p class="link2nd">Movies,TV <br>Celebrities</p>
+                                    </div>
+                                    <div class="footlink1 underline">
+                                        <p class="linkfirst">Amazon Prime Music</p>
+                                        <p class="link2nd">100 million songs,ad-free <br>Over 15 million podcast episodes</p>
+                                        </div>
+                                    
+            
+                                        
+            
+                                        
+                                    </div>
+            
+        
+    
+                        
+                   
+
+
+                    </div>
+                </div>
+
+                
+
+            <div class="copyright">
+                <div class="copyright_link">
+                    <div class="clink">
+                        <p class="underline">conditions of use & sale</p>
+                        <p class="underline">Interest-Based Ads Notice</p>
+                        <p class="underline">Cookies Notice</p>
+
+                        <p class="underline">Privacy Notice</p>
+
+
+                    </div>
+                    <div class="cright">
+                        <p> © 1996-2024, Amazon.com, Inc. or its affiliates</p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </footer>
+    
+</body>
+
+</html>
